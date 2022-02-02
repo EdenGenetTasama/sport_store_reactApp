@@ -7,6 +7,20 @@
   pointer-events: none;
 }
 
+.cardContainer{
+  display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+
+}
+
+.imageOfCard{
+  width: 200px;
+  height: 200px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
