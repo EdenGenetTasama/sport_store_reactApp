@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import { ShoesContext } from "../../../ContextFlie/shoesContext";
 
+
 const Shoes = () => {
   const shoesValueFromContext = useContext(ShoesContext);
   // console.log(shoesValueFromContext.shoesFromApi);
 
   return (
+
     <div>
       <h1>Shoes</h1>
       {shoesValueFromContext.shoesFromApi.map((item) => (
@@ -18,6 +20,7 @@ const Shoes = () => {
         </div>
       ))}
     </div>
+
   );
 };
 
