@@ -3,7 +3,6 @@ import { GetShoesDetails } from "../service/shoes-service";
 
 export const ShoesContext = React.createContext();
 
-// const arrayOfNames = ["Eden" , "Yafit" , "Daniel" , "Roi"]
 
 
 const ShoesContextProvider = ({ children }) => {
@@ -13,7 +12,7 @@ const ShoesContextProvider = ({ children }) => {
   }, []);
   
   return (
-    <ShoesContext.Provider value={{ shoesFromApi, setShoesFromApi }}>
+    <ShoesContext.Provider value={{ shoesFromApi }}>
       {children}
     </ShoesContext.Provider>
   );

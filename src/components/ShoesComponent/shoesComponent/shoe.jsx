@@ -1,24 +1,16 @@
 import React, { useContext } from "react";
-import { ShoesContext } from "../../../ContextFlie/shoesContext";
+import ShoesContextProvider from "../../../ContextFlie/shoesContext";
+import ShoesCards from "../../ShoesCardsComponet/ShoesCards";
 
 
 const Shoes = () => {
-  const shoesValueFromContext = useContext(ShoesContext);
-  // console.log(shoesValueFromContext.shoesFromApi);
 
   return (
-
-    <div>
+    <div className="gfgfgfgfgf">
       <h1>Shoes</h1>
-      {shoesValueFromContext.shoesFromApi.map((item) => (
-        <div className="cardContainer">
-          <h2>{item.shoeType}</h2>
-          <p>
-            {item.company} , {item.shoeModel} , {item.shoePrice}
-          </p>
-          <img src={item.linkImage} className="imageOfCard" />
-        </div>
-      ))}
+      <ShoesContextProvider>
+        <ShoesCards/>
+      </ShoesContextProvider>
     </div>
 
   );
