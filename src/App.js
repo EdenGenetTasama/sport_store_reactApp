@@ -1,5 +1,4 @@
 import "./App.css";
-import PantsProviderComp from "./ContextFlie/pantsContext";
 import React from "react";
 import Shoes from "./components/ShoesComponent/shoesComponent/shoe";
 import Pants from "./components/PantsConponent/pants";
@@ -12,13 +11,11 @@ function App() {
       
         <Shoes />
 
-      {/* <PantsProviderComp> */}
         <Pants />
-      {/* </PantsProviderComp> */}
 
-      <ShirtsProvider>
+      {/* <ShirtsProvider> */}
         <Shirts/>
-      </ShirtsProvider>
+      {/* </ShirtsProvider> */}
     </div>
   );
 }

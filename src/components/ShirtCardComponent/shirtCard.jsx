@@ -26,7 +26,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-const PantCard = ({itemInPantCards}) => {
+const ShirtCard = ({ shirtFromContext }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -38,7 +38,7 @@ const PantCard = ({itemInPantCards}) => {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            {itemInPantCards.clothingGender.charAt(0)}
+            {shirtFromContext.clothingGender.charAt(0)}
           </Avatar>
         }
         action={
@@ -46,17 +46,19 @@ const PantCard = ({itemInPantCards}) => {
             <MoreVertIcon />
           </IconButton>
         }
-        title={itemInPantCards.clothingCompany}
-        subheader={itemInPantCards.clothingModel}
+        title={shirtFromContext.clothingCompany}
+        subheader={shirtFromContext.clothingModel}
       />
       <CardMedia
         component="img"
         height="194"
-        image={itemInPantCards.linkToClothing}
+        image={shirtFromContext.linkToClothing}
         alt="Paella dish"
       />
       <CardContent>
-        Price: {itemInPantCards.clothingPrice}$
+        <Typography variant="body2" color="text.secondary">
+          Price: {shirtFromContext.clothingPrice}$
+        </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
@@ -76,7 +78,7 @@ const PantCard = ({itemInPantCards}) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>{itemInPantCards.clothingType}</Typography>
+          <Typography paragraph>{shirtFromContext.clothingType}</Typography>
           <Typography paragraph>
           About shoe : Lorem, ipsum. Omnis, ad? Ad, sunt?
           </Typography>
@@ -86,5 +88,12 @@ const PantCard = ({itemInPantCards}) => {
   );
 };
 
-export default PantCard;
+// const ShirtCard=({shirtFromContext})=>{
+// console.log(shirtFromContext);
+//     return(<div>
 
+//     </div>
+//     )
+// }
+
+export default ShirtCard;
