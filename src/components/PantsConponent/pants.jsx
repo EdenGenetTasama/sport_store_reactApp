@@ -3,7 +3,7 @@ import { contextPants } from "../../ContextFlie/pantsContext";
 
 const Pants = () => {
   const PantsValue = useContext(contextPants);
-  console.log(PantsValue);
+//   console.log(PantsValue);
   return (
     <div>
       <h1>Pants</h1>
