@@ -5,10 +5,12 @@ import Pants from "./components/PantsConponent/pants";
 import Navbar from "./components/NavbarComponent/navbar";
 import Footer from "./components/FooterComponent/footer";
 import Shirts from "./components/ShirtsComponent/shirt";
+import Header from "./components/HeaderComponent/header";
 
 const Routing = () => {
   return (
     <BrowserRouter>
+      <Header />
       <Navbar />
       <Routes>
         <Route path="/" element={<Shoes />}></Route>

@@ -1,0 +1,6 @@
+.NavbarGrid{
+    grid-area: menu;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}

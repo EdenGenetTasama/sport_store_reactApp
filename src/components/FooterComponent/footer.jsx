@@ -1,9 +1,7 @@
+import "./footer.css";
 
-const Footer=()=>{
-
-    return(<div>
-This is footer
-    </div>)
-}
+const Footer = () => {
+  return <div className="FooterGrid">This is footer</div>;
+};
 
 export default Footer;
