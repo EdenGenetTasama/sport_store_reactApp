@@ -12,9 +12,9 @@ function App() {
       
         <Shoes />
 
-      <PantsProviderComp>
+      {/* <PantsProviderComp> */}
         <Pants />
-      </PantsProviderComp>
+      {/* </PantsProviderComp> */}
 
       <ShirtsProvider>
         <Shirts/>

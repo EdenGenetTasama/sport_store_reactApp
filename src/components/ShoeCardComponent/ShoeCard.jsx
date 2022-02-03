@@ -38,7 +38,7 @@ const ShoeCard = ({ shoeInfo }) => {
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-              R
+              S
             </Avatar>
           }
           action={
@@ -57,7 +57,7 @@ const ShoeCard = ({ shoeInfo }) => {
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-            {shoeInfo.shoePrice}
+            Price :{shoeInfo.shoePrice} $
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
