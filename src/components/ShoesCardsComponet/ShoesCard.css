@@ -1,13 +1,18 @@
-.DivOfCard{
+.DivOfCard {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* width: 100vw; */
+
 
 }
 
-.oneCardStyle{
+.DivOfAllHTML {
+    overflow: scroll;
+
+}
+
+.oneCardStyle {
     width: 20%;
     height: 33%;
-    padding:1%;
+    padding: 1%;
 }

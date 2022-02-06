@@ -7,12 +7,15 @@ export const ShoesContext = React.createContext();
 
 const ShoesContextProvider = ({ children }) => {
   const [shoesFromApi, setShoesFromApi] = useState([]);
+  const [isLoading , setIsLoading] = useState(false);
+
   useEffect(() => {
-    GetShoesDetails().then((data) => setShoesFromApi(data.listOfAllShoes));
+    setIsLoading(true);
+    GetShoesDetails().then((data) => setShoesFromApi(data.listOfAllShoes)).finally(()=>{setIsLoading(false)});
   }, []);
   
   return (
-    <ShoesContext.Provider value={{ shoesFromApi }}>
+    <ShoesContext.Provider value={{ shoesFromApi , isLoading }}>
       {children}
     </ShoesContext.Provider>
   );

@@ -1,19 +1,23 @@
 import { ShoesContext } from "../../ContextFlie/shoesContext";
 import { useContext } from "react";
 import ShoeCard from "../ShoeCardComponent/ShoeCard";
-import '../ShoesCardsComponet/ShoesCard.css'
+import "../ShoesCardsComponet/ShoesCard.css";
+import Loading from "../LoadingComponent/Loading";
 
 const ShoesCards = () => {
-  const shoesValueFromApi = useContext(ShoesContext);
+  const { shoesFromApi, isLoading } = useContext(ShoesContext);
 
-  
   return (
     <div className="DivOfCard">
-      {shoesValueFromApi.shoesFromApi.map((itemShoe) => (
-        <div className="oneCardStyle">
-          <ShoeCard shoeInfo={itemShoe} />
-        </div>
-      ))}
+      {isLoading ? 
+        <Loading />
+      : (
+        shoesFromApi.map((itemShoe) => (
+          <div className="oneCardStyle">
+            <ShoeCard shoeInfo={itemShoe} />
+          </div>
+        ))
+      )}
     </div>
   );
 };

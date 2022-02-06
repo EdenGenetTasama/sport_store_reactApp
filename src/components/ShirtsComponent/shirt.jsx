@@ -4,10 +4,8 @@ import ShirtsCards from "../ShirtsCardsComponent/ShirtsCards";
 
 
 const Shirts = () => {
-  // const shirtsApiValues = useContext(ContextShirts);
-  // //   console.log(shirtsApiValues.shirtsApiInfo);
   return (
-    <div>
+    <div className="DivOfAllHTML">
       <ShirtsProvider>
         <h1>Shirts</h1>
         <ShirtsCards />
@@ -18,15 +16,3 @@ const Shirts = () => {
 
 export default Shirts;
 
-{
-  /* <h1>Shirts</h1>
-{shirtsApiValues.shirtsApiInfo.map((shirt) => (
-  <div className="cardContainer">
-    <h2>{shirt.clothingType}</h2>
-    <p>
-      {shirt.clothingCompany} , {shirt.clothingModel} , {shirt.clothingPrice}
-    </p>
-    <img src={shirt.linkToClothing} className="imageOfCard" />
-  </div>
-))} */
-}
