@@ -1,11 +1,12 @@
 import "./App.css";
-import React from "react";
+import React, { useReducer } from "react";
 import Routing from "./RoutingPage";
+
 
 function App() {
   return (
     <div className="App">
-      <Routing/>
+      <Routing />
     </div>
   );
 }
